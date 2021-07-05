@@ -13,7 +13,7 @@ const {
     createFavorite, getFavorite, deleteFavorite, updateFavorite
 } = require('./controllers/favorite.crud.controller')
 
-mongoose.connect("mongodb://localhost:27017/practice", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect(`${process.env.ATLAS_URL}`, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
 
 app.get('/', (req, res) => {
